@@ -1,0 +1,21 @@
+<div style="padding: 2rem; font-family: Arial, sans-serif;">
+  <h1>Sistema de Pedidos</h1>
+  
+  <div *ngIf="!isLoggedIn" style="margin-top: 1rem;">
+    <p>Debes autenticarte para acceder al sistema.</p>
+    <button (click)="login()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+      Iniciar Sesión con Microsoft
+    </button>
+  </div>
+
+  <div *ngIf="isLoggedIn" style="margin-top: 1rem;">
+    <p>Bienvenido, <strong>{{ userName }}</strong></p>
+    <button (click)="logout()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+      Cerrar Sesión
+    </button>
+  </div>
+
+  <hr style="margin: 2rem 0;" />
+  
+  <router-outlet></router-outlet>
+</div>
