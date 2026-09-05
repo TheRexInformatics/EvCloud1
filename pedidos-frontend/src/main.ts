@@ -1,3 +1,4 @@
+import 'zone.js'; // Esta línea resuelve el error NG0908
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app';
